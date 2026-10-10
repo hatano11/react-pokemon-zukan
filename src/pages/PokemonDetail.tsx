@@ -1,16 +1,16 @@
-import React from 'react';
+import { Link } from 'react-router-dom'
+import PageHeading from '../components/PageHeading'
 
-const PokemonDetail: React.FC = () => {
+export default function PokemonDetail() {
   return (
-    <div className="text-center mt-10 bg-slate-500">
-      <h1 className="text-4xl font-bold text-blue-500">
-        Reactポケモン図鑑詳細
-      </h1>
-      <div className="bg-slate-500">
-        ここにポケモンの画像やステータスなどを表示する。
-      </div>
-    </div>
-  );
-};
-
-export default PokemonDetail;
+    <main className="mx-auto max-w-3xl p-4">
+      <PageHeading title="ポケモン詳細" />
+      <p className="mb-4">
+        ここには、後で選んだポケモンの情報を表示します。
+      </p>
+      <Link className="underline" to="/">
+        一覧へ戻る
+      </Link>
+    </main>
+  )
+}
